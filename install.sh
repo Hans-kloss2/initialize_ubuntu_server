@@ -16,7 +16,7 @@ sudo apt install -y curl wget git ufw htop unzip zip tmux fail2ban sl
 # 3. Enable Unattended Upgrades
 echo "Installing and configuring unattended-upgrades..."
 sudo apt install -y unattended-upgrades apt-listchanges
-sudo dpkg-reconfigure --priority=low unattended-upgrades
+sudo dpkg-reconfigure -f noninteractive unattended-upgrades
 
 # 4. Enable automatic security updates (if not already done)
 echo "Ensuring automatic security updates are enabled..."
