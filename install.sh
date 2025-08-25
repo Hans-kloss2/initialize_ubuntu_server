@@ -78,10 +78,10 @@ echo -e "=============================\033[0m"
 
 echo "Press ENTER to reboot, or any other key to abort..."
 while true; do
-    # Read a single key press, without echo
+    # Read a single key press without echo
     read -rsn1 key
 
-    if [ "$key" = "" ]; then
+    if [[ -z "$key" ]]; then
         echo "Rebooting now..."
         sudo reboot
         break
