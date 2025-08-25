@@ -6,12 +6,12 @@
 
 Direct install
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Hans-kloss2/initialize_ubuntu_server/main/initialize_ubuntu_server.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/Hans-kloss2/initialize_ubuntu_server/main/install.sh | sudo bash
 ```
 
 Download and then install
 ```bash
-curl -fsSL -o initialize_ubuntu_server.sh https://raw.githubusercontent.com/Hans-kloss2/initialize_ubuntu_server/main/initialize_ubuntu_server.sh && chmod +x initialize_ubuntu_server.sh && sudo ./initialize_ubuntu_server.sh
+curl -fsSL -o install.sh https://raw.githubusercontent.com/Hans-kloss2/initialize_ubuntu_server/main/install.sh && chmod +x install.sh && sudo ./install.sh
 ```
 
 ### Improvements:
