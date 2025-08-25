@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "\033[1;32m============================="
-echo -e "       SCRIPT VERSION 1.4     "
+echo -e "       SCRIPT VERSION 1.5     "
 echo -e "=============================\033[0m"
 
 
@@ -35,6 +35,7 @@ sudo apt-get install -y ca-certificates curl gnupg lsb-release
 
 echo "→ Adding Docker’s official GPG key..."
 sudo install -m 0755 -d /etc/apt/keyrings
+sudo rm -f /etc/apt/keyrings/docker.gpg
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg --yes
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
