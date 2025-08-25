@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "\033[1;32m============================="
-echo -e "       SCRIPT VERSION 1.9     "
+echo -e "       SCRIPT VERSION 1.6     "
 echo -e "=============================\033[0m"
 
 
