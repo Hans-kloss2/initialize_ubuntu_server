@@ -76,13 +76,15 @@ echo -e "\033[1;32m============================="
 echo -e "       SCRIPT COMPLETED SUCCESSFULLY   "
 echo -e "=============================\033[0m"
 
-echo "Press ENTER to reboot, or any other key to abort..."
-read -r -n1 key
 
-if [[ -z "$key" ]]; then
-    echo -e "\nRebooting now..."
-    sudo reboot
-else
-    echo -e "\nReboot aborted."
-fi
+read -p "Do you want to reboot? (y/N): " answer
 
+case "$answer" in
+    [yY]|[yY][eE][sS])
+        echo "Rebooting now..."
+        sudo reboot
+        ;;
+    *)
+        echo "Reboot aborted."
+        ;;
+esac
