@@ -77,14 +77,6 @@ echo -e "       SCRIPT COMPLETED SUCCESSFULLY   "
 echo -e "=============================\033[0m"
 
 
-read -p "Do you want to reboot? (y/N): " answer
-
-case "$answer" in
-    [yY]|[yY][eE][sS])
-        echo "Rebooting now..."
-        sudo reboot
-        ;;
-    *)
-        echo "Reboot aborted."
-        ;;
-esac
+echo "Reboot in 3 seconds..."
+sleep 3
+sudo reboot now
