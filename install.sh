@@ -75,3 +75,7 @@ sudo apt autoclean -y
 echo -e "\033[1;32m============================="
 echo -e "       SCRIPT COMPLETED SUCCESSFULLY   "
 echo -e "=============================\033[0m"
+
+echo "Rebooting in 3 seconds..."
+sleep 3
+sudo reboot
