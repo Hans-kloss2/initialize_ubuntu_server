@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "\033[1;32m============================="
-echo -e "       SCRIPT VERSION 1.6     "
+echo -e "       SCRIPT VERSION 1.7     "
 echo -e "=============================\033[0m"
 
 
@@ -55,7 +55,7 @@ sudo systemctl enable docker
 echo "→ Adding current user ($USER) to the docker group..."
 echo "→ Adding current user ($USER) to the docker group..."
 sudo groupadd docker || true
-sudo usermod -aG docker "$USER"
+sudo usermod -aG docker $(logname)
 echo -e "\033[1;31mDocker group membership updated. You must log out and log back in to use Docker without sudo.\033[0m"
 
 echo "Testing docker..."
@@ -76,6 +76,12 @@ echo -e "\033[1;32m============================="
 echo -e "       SCRIPT COMPLETED SUCCESSFULLY   "
 echo -e "=============================\033[0m"
 
-echo "Rebooting in 3 seconds..."
-sleep 3
-sudo reboot
+echo "Press ENTER to reboot, or any other key to abort..."
+read -n 1 key
+
+if [ "$key" = "" ]; then
+    echo "Rebooting now..."
+    sudo reboot
+else
+    echo "Reboot aborted."
+fi
