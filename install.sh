@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo -e "\033[1;32m============================="
+echo -e "       SCRIPT VERSION 1.0     "
+echo -e "=============================\033[0m"
+
+
 echo "Starting Ubuntu server initialization..."
 
 # 1. Update & upgrade system
