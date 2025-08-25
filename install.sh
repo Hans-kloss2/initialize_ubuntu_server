@@ -77,16 +77,12 @@ echo -e "       SCRIPT COMPLETED SUCCESSFULLY   "
 echo -e "=============================\033[0m"
 
 echo "Press ENTER to reboot, or any other key to abort..."
-while true; do
-    # Read a single key press without echo
-    read -rsn1 key
+read -r -n1 key
 
-    if [[ -z "$key" ]]; then
-        echo "Rebooting now..."
-        sudo reboot
-        break
-    else
-        echo "Reboot aborted."
-        break
-    fi
-done
+if [[ -z "$key" ]]; then
+    echo -e "\nRebooting now..."
+    sudo reboot
+else
+    echo -e "\nReboot aborted."
+fi
+
