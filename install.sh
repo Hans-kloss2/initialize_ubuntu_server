@@ -67,4 +67,6 @@ echo "Cleaning up..."
 sudo apt autoremove -y
 sudo apt autoclean -y
 
-echo "Server initialization complete!"
+echo -e "\033[1;32m============================="
+echo -e "       SCRIPT COMPLETED SUCCESSFULLY   "
+echo -e "=============================\033[0m"
