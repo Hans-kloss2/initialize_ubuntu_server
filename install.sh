@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "\033[1;32m============================="
-echo -e "       SCRIPT VERSION 1.5     "
+echo -e "       SCRIPT VERSION 1.6     "
 echo -e "=============================\033[0m"
 
 
@@ -61,7 +61,10 @@ echo "Testing docker..."
 sudo docker run hello-world
 
 echo "Users in docker group"
+echo "---------------------"
 getent group docker
+echo "---------------------"
+echo ""
 
 # 5. Clean up
 echo "Cleaning up..."
