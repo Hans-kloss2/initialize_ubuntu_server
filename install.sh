@@ -56,6 +56,7 @@ echo "→ Adding current user ($USER) to the docker group..."
 echo "→ Adding current user ($USER) to the docker group..."
 sudo groupadd docker || true
 sudo usermod -aG docker "$USER"
+echo -e "\033[1;31mDocker group membership updated. You must log out and log back in to use Docker without sudo.\033[0m"
 
 echo "Testing docker..."
 sudo docker run hello-world
