@@ -16,7 +16,7 @@ sudo apt upgrade -y
 
 # 2. Install essential utilities
 echo "Installing useful utilities..."
-sudo apt install -y curl wget git ufw htop unzip zip tmux fail2ban sl
+sudo apt install -y curl wget git ufw htop unzip zip tmux fail2ban sl wireguard-tools
 
 # 3. Enable Unattended Upgrades
 echo "Installing and configuring unattended-upgrades..."
